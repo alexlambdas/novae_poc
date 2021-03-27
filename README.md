@@ -4,12 +4,19 @@ _Repositorio que contiene los fuentes de la presentación de la prueba técnica 
 optar por el cargo de desarrollador para la empresa Novae_
 
 _Para cumplir con los requerimientos de la prueba, se utilizan las siguientes tecnologias:_
+
 _Docker_
+
 _Postgres_
+
 _Spring Boot_
+
 _Java 1.8_
+
 _ReactJS_
+
 _NodeJS_
+
 _Git_
 
 ## Comenzando 🚀
