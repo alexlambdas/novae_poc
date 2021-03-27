@@ -1,20 +1,41 @@
-# Título del Proyecto
+# Prueba Técnica - Novae
 
-_Acá va un párrafo que describa lo que es el proyecto_
+_Repositorio que contiene los fuentes de la presentación de la prueba técnica para
+optar por el cargo de desarrollador para la empresa Novae.
+
+Para cumplir con los requerimientos de la prueba, se utilizan las siguientes tecnologias:
+Docker
+Postgres
+Spring Boot
+Java 1.8
+ReactJS
+NodeJS
+Git_
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo._
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+Mira **Despliegue** para conocer como instalar el proyecto en un ambiente local.
 
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Que software necesitas y como verificar que lo tienes instalado ?_
+
+_Docker_
+
+_Verificar que esta instalado y se esta ejecutando el servicio con el siguente comando_
+```
+docker info
+```
+
+_Git_
+
+_Verficar que esta instalado con el siguiente comando_
 
 ```
-Da un ejemplo
+git version
 ```
 
 ### Instalación 🔧
