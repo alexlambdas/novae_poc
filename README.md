@@ -1,16 +1,16 @@
 # Prueba Técnica - Novae
 
 _Repositorio que contiene los fuentes de la presentación de la prueba técnica para
-optar por el cargo de desarrollador para la empresa Novae.
+optar por el cargo de desarrollador para la empresa Novae_
 
-Para cumplir con los requerimientos de la prueba, se utilizan las siguientes tecnologias:
-Docker
-Postgres
-Spring Boot
-Java 1.8
-ReactJS
-NodeJS
-Git_
+_Para cumplir con los requerimientos de la prueba, se utilizan las siguientes tecnologias:_
+_Docker_
+_Postgres_
+_Spring Boot_
+_Java 1.8_
+_ReactJS_
+_NodeJS_
+_Git_
 
 ## Comenzando 🚀
 
@@ -27,7 +27,7 @@ _Docker_
 
 _Verificar que esta instalado y se esta ejecutando el servicio con el siguente comando_
 ```
-docker info
+# docker info
 ```
 
 _Git_
@@ -35,7 +35,7 @@ _Git_
 _Verficar que esta instalado con el siguiente comando_
 
 ```
-git version
+# git version
 ```
 
 ### Instalación 🔧
