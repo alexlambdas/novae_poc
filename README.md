@@ -30,6 +30,9 @@ Mira **Despliegue** para conocer como instalar el proyecto en un ambiente local.
 
 _Que software necesitas y como verificar que lo tienes instalado ?_
 
+**nota:** no es propósito de esta guia, explicar la instalación y configuración de _Docker_ o _Git_, se asume
+que ya estan instalados.
+
 _Docker_
 
 _Verificar que esta instalado y se esta ejecutando el servicio con el siguente comando_
