@@ -1,13 +1,75 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Styles for Navbar.js */
+.circle_hover:hover {
+  background-color: white;
+  opacity: 0.2;
+  transition: 0.4s ease;
+}
+.sidenav_item:hover{
+  background-color: #eeeeee;
+}
+
+/* Styles for NewUser.js */
+.input_save_user:focus {
+  outline: none;
+  border: 10px solid #00bfa5;
+}
+.input_save_user:active {
+  border: 10px solid #00bfa5;
+}
+.btn_save_user {
+  background-color: #f06292;
+}
+.btn_save_user:hover {
+  background-color: #f50057;
+  transition: 0.3s ease;
+}
+.btn_save_user:focus {
+  outline: none;
+}
+.btn_save_user:active {
+  background-color: #c51162;
+}
+
+/* Styles for SearchBar.js */
+.input_search_bar::placeholder{
+  text-align: center;
+}
+.input_search_bar:focus{
+  outline: none;
+}
+.btn_search_bar {
+  background-color: #00b8d4;
+}
+.btn_search_bar:focus {
+  outline: none;
+}
+.btn_search_bar:hover {
+  background-color: #4dd0e1;
+  transition: 0.3s ease;
+}
+.btn_search_bar:active {
+  background-color: #00838f;
+}
+
+/* Styles for UdateCreditCard.js */
+.btn_update_credit_card {
+  background-color: #e040fb;
+}
+.btn_update_credit_card:hover {
+  background-color: #aa00ff;
+  transition: 0.3s ease;
+}
+.btn_update_credit_card:focus {
+  outline: none;
+}
+.btn_update_credit_card:active {
+  background-color: #4a148c;
 }
