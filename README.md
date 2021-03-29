@@ -47,7 +47,7 @@ _Verficar que esta instalado con el siguiente comando_
 
 _Puertos locales del Computador_
 
-_Verficar que los puertos 6002 (ReactAPP), 6001 (SpringBoot App) y 5454 (Postgresql) estan disponibles, ya que son utilizados por los contenedores Docker del proyecto_
+_Verficar que los puertos 6002 (ReactAPP), 6001 (SpringBoot App) y 5432 (Postgresql) estan disponibles, ya que son utilizados por los contenedores Docker del proyecto_
 
 **nota:** no es propósito de esta guia, explicar la instalación y configuración de _Docker_ o _Git_, se asume
 que ya estan instalados y configurados.
@@ -71,39 +71,39 @@ novae_poc#
 _Crear una red interna en docker para la conexión de los contenedores_
 
 ```
-novae_poc# docker network create net_poc_novae_test
+novae_poc# docker network create --driver=bridge --subnet=192.168.90.0/24 br5
 ```
 
 _Ejecutar el siguiente comando Docker para crear el contenedor de BDD Postgresql_
 
 ```
-novae_poc# docker run -p 5454:5432 --name novae_postgresql -e POSTGRES_PASSWORD=novae_test_2021 --network net_poc_novae_test -d postgres
+novae_poc# docker run -p 5432:5432 --name novae_postgresql --hostname novae_postgresql -e POSTGRES_PASSWORD=novae_test_2021 --network br5 --ip 192.168.90.5 -d postgres
 ```
 
-_Ya descargada la imagen de postgresql y ejecutandose el contenedor, consultar el id del contenedor con el siguiente comando_
+_Ya descargada la imagen de postgresql y ejecutandose el contenedor, consultar el nombre del contenedor con el siguiente comando para confirmar que se creo con exito_
 
 ```
 novae_poc# docker ps
 ```
 
-**Nota** se debe copiar y guardar para uso posterior el numero llamado _CONTAINER ID_
+**Nota** debe aparecer el contenedor con el nombre **novae_postgresql**
 
-_En una terminal nueva, vamos a ingresar a ese contenedor para cargar los scripts de BDD, con el id del contenedor que se consulto en el paso previo, por ejemplo mi id fue **ce62d9b75c61**_
+_En una terminal nueva, vamos a ingresar a ese contenedor para cargar los scripts de BDD, con el nombre del contenedor que se consulto en el paso previo_
 
 ```
-novae_poc# docker exec -it ce62d9b75c61 bash
+novae_poc# docker exec -it novae_postgresql bash
 ```
 
 _Asi ya ingresamos al contenedor de Postgresql en una terminal **bash** y se deberia ver algo parecido a lo siguente, puede variar el id del nombre del contenedor:_
 
 ```
-root@4f7da5336fcd:/#
+root@novae_postgresql:/#
 ```
 
 _Desde ese mismo terminal, ahora vamos a ingresar al motor de base de datos postgresql con el siguiente comando_
 
 ```
-root@4f7da5336fcd:/# psql -U postgres
+root@novae_postgresql:/# psql -U postgres
 ```
 
 _Se debe ver algo asi para confirmar que ya estamos adentro de la base de datos, puede variar el nombre de la terminal dependiendo el id del contenedor_
@@ -116,7 +116,7 @@ _Cargar los scripts de base de datos, estan en este mismo proyecto en la carpeta
 
 _O cargar los scripts a traves del gestor de base de datos de su preferencia, conectandose al contenedor con los siguientes datos de autenticacion_
 
-**Pueerto** 5454
+**Pueerto** 5432
 **Usuario** postgres
 **Contraseña** novae_test_2021
 
@@ -143,13 +143,13 @@ novae_poc# cd ./docker_springboot_back
 _Ejecutar el siguiente comando Docker para construir la imagen_
 
 ```
-docker_springboot_back# docker build ./ -t docker_springboot_back
+docker_springboot_back# docker build -t docker_springboot_back .
 ```
 
 _Cuando finalice la descarga y construcción de la imagen, ejecutar el siguiente comando docker para crear el contenedor_
 
 ```
-docker_springboot_back# docker run -p 6001:6001 --name docker_springboot_back -e spring.datasource.url=jdbc:postgresql://novae_postgresql:5454/db_admin_credit_cards --network net_poc_novae_test -d docker_springboot_back
+docker_springboot_back# docker run -p 6001:6001 --name docker_springboot_back --network br5 --ip 192.168.90.6 --link novae_postgresql -e spring.datasource.url=jdbc:postgresql://192.168.90.5:5432/postgres -d docker_springboot_back
 ```
 
 ### Instalación REACTJS APP 🔧
@@ -169,7 +169,7 @@ docker_reactjs_front# docker build -t docker_react_front .
 _Cuando finalice la descarga y construcción de la imagen, ejecutar el siguiente comando docker para crear el contenedor_
 
 ```
-docker_reactjs_front#  docker run -p 6002:6002 --name docker_react_front --network net_poc_novae_test -d docker_react_front
+docker_reactjs_front#  docker run -p 6002:6002 --name docker_react_front --network br5 -d docker_react_front
 ```
 
 ### Verificación del despliegue 🔧

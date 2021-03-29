@@ -1,9 +1,3 @@
-/* CREACION DE LA BASE DE DATOS */
-create database db_admin_credit_cards;
-
-/* SELECCION DE LA BASE DE DATOS */
-\c db_admin_credit_cards;
-
 /* ELIMINACION DE TABLAS POR PREVENCION */
 drop table if exists tb_user;
 drop table if exists tb_credit_card;
@@ -49,8 +43,8 @@ insert into tb_credit_card(card_number,card_type,dni) values (5476888347584221,'
 insert into tb_credit_card(card_number,card_type,dni) values (4950456436842484,'visa',140487134);
 insert into tb_credit_card(card_number,card_type,dni) values (5430672098238509,'mastercard',140487135);
 insert into tb_credit_card(card_number,card_type,dni) values (5227528227543538,'mastercard',140487131);
-insert into tb_credit_card(card_number,card_type,dni) values (4539396814789404,'visa',140487132);
+insert into tb_credit_card(card_number,card_type,dni) values (4523396814309404,'visa',140487132);
 insert into tb_credit_card(card_number,card_type,dni) values (4556567892898880,'visa',140487132);
-insert into tb_credit_card(card_number,card_type,dni) values (5476888347584221,'mastercard',140487132);
-insert into tb_credit_card(card_number,card_type,dni) values (4950456436842484,'visa',140487134);
+insert into tb_credit_card(card_number,card_type,dni) values (5476462697584221,'mastercard',140487132);
+insert into tb_credit_card(card_number,card_type,dni) values (4950456436843535,'visa',140487134);
 insert into tb_credit_card(card_number,card_type,dni) values (5439987098233455,'mastercard',140487135);
