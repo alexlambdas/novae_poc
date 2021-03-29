@@ -114,7 +114,15 @@ postgres=#
 
 _Cargar los scripts de base de datos, estan en este mismo proyecto en la carpeta **./resource_app/ScriptBDD.SQL**, copiar todo el contenido y pegarlo en la terminal de postgresql que esta abierta del paso anterior_
 
+_O cargar los scripts a traves del gestor de base de datos de su preferencia, conectandose al contenedor con los siguientes datos de autenticacion_
+
+**Pueerto** 5454
+**Usuario** postgres
+**Contraseña** novae_test_2021
+
 _Verificar que no existieran errores en la carga de los script de base de datos._
+
+
 
 _Podemos salir de las terminales con el comando **exit**, la terminal de postgresql, y la terminal del contenedor, ya no se necesitan mas_
 
@@ -171,6 +179,62 @@ _Desde cualquier terminal, con el siguiente comando se deben poder ver los tres 
 ```
 novae_poc# docker ps
 ```
+
+_Desde el navegador ingresar a la direccion **http://localhost:6002/** y poder navegar en la APP Web_
+
+### RUTAS SpringBoot APP Modelo tb_user 🔧
+
+**GET**
+
+_Todos los Usuarios_
+
+http://localhost:6001/api/v1/user
+
+_Usuario por DNI_
+
+http://localhost:6001/api/v1/user/{DNI}
+
+**POST**
+
+_Guardar un Usuario_
+
+http://localhost:6001/api/v1/user
+
+**DELETE**
+
+_Eliminar Usuario por DNI_
+
+http://localhost:6001/api/v1/user/{DNI}
+
+
+### RUTAS SpringBoot APP Modelo tb_credit_card 🔧
+
+**GET**
+
+_Todos las tarjetas de crédito_
+
+http://localhost:6001/api/v1/card
+
+_Tarjeta de Crédito por numero_
+
+http://localhost:6001/api/v1/card/{card_number}
+
+_Tarjeta de Crédito asociadas a una persona por DNI_
+
+http://localhost:6001/api/v1/card/dni/{DNI}
+
+**POST**
+
+_Guardar una Tarjeta de Crédito_
+
+http://localhost:6001/api/v1/card
+
+**DELETE**
+
+_Eliminar tarjeta de credito por numero_
+
+http://localhost:6001/api/v1/card/{card_number}
+
 
 ## Autor ✒️
 
