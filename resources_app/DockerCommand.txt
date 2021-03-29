@@ -1,0 +1,34 @@
+
+NETWORK DOCKER
+docker network create net_poc_novae_test
+
+
+===========================================================
+===========================================================
+CONTAINER POSTGRES
+===========================================================
+===========================================================
+docker run -p 5454:5432 --name novae_postgresql -e POSTGRES_PASSWORD=novae_test_2021 --network net_poc_novae_test -d postgres
+docker exec -it 8d696163fd37 bash
+psql -U postgres
+
+docker exec -it ce62d9b75c61 bash
+psql -U postgres
+
+
+===========================================================
+===========================================================
+CONTAINER SPRING BOOT SERVICE
+===========================================================
+===========================================================
+docker build ./ -t docker_springboot_back
+docker run -p 6001:6001 --name docker_springboot_back -e spring.datasource.url=jdbc:postgresql://novae_postgresql:5454/db_admin_credit_cards --network net_poc_novae_test -d docker_springboot_back
+
+
+===========================================================
+===========================================================
+CONTAINER REACTJS
+===========================================================
+===========================================================
+docker build -t docker_react_front .
+docker run -p 6002:6002 --name docker_react_front --network net_poc_novae_test -d docker_react_front

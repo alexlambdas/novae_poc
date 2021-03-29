@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import MaterialIcon from "material-icons-react";
 
-import { ROUTES, LINKS } from "../../resources/Routes";
+import { ROUTES } from "../../resources/Routes";
 import styles from "./Styles";
 import "../../index.css";
 

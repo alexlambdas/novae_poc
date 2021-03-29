@@ -65,7 +65,6 @@ const styles = {
     buttonSave: {
         height: "30px",
         width: "270px",
-        border: "none",
         border: "1px solid #f06292",
         color: "white",
         fontSize: "16px",

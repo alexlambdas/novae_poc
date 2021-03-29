@@ -34,6 +34,16 @@ const styles = {
         fontSize: "18px",
         cursor: "pointer"
     },
+    btnResetBar: {
+        width: "100px",
+        border: "none",
+        borderRadius: "5px",
+        color: "white",
+        fontFamily: "'Ubuntu'",
+        fontSize: "18px",
+        cursor: "pointer",
+        marginLeft: "20px"
+    },
     btnSearchBarDisable: {
         width: "100px",
         border: "none",

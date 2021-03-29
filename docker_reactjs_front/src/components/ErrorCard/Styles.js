@@ -9,26 +9,28 @@ const styles = {
         display: "flex",
         flexDiretion: "row",
         justifyContent: "center",
-        marginTop: "20px"
+        marginTop: "40px"
     },
     titleForm: {
         textAlign: "center",
         fontSize: "24px",
         color: "white",
         fontFamily: "'Ubuntu'",
-        backgroundColor: "#e040fb",
+        backgroundColor: "#f50057",
         paddingTop: "18px",
         paddingBottom: "18px"
     },
     containerInputs: {
         paddingLeft: "20px",
         paddingRight: "20px",
-        paddingBottom: "20px"
+        paddingBottom: "20px",
+        fontFamily: "'Ubuntu'",
+        marginTop: "20px"
     },
     formSaveUser: {
         display: "flex",
         flexDirection: "Column",
-        border: "1px solid #e040fb",
+        border: "1px solid #f50057",
         borderRadius: "5px",
         width: "400px",
         height: "200px"
@@ -52,7 +54,7 @@ const styles = {
         marginLeft: "50px",
         height: "30px",
         width: "270px",
-        border: "1px solid #03a9f4",
+        border: "1px solid #f50057",
         borderRadius: "5px", 
         fontSize: "16px",
         color: "#616161",
@@ -62,13 +64,12 @@ const styles = {
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
-        marginTop: "25px"
+        marginTop: "10px"
     },
     buttonSave: {
         height: "30px",
         width: "270px",
-        border: "none",
-        border: "1px solid #e040fb",
+        border: "1px solid #f50057",
         color: "white",
         fontSize: "16px",
         borderRadius: "5px",

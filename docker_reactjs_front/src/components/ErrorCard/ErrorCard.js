@@ -1,16 +1,14 @@
 import React from "react";
 
-import Navbar from "../Navbar/Navbar";
-
 import styles from "./Styles";
 import "../../index.css";
 
 function ErrorCard(props){
 
-    const { openNav, handleOpenNav, description} = props;
+    const { setShowError, description} = props;
 
     const handleClick = () => {
-        
+        setShowError(false);
     }
 
     const formObject = (
@@ -22,9 +20,9 @@ function ErrorCard(props){
             <div style={styles.containerButton}>
                 <button 
                     style={styles.buttonSave} 
-                    className="btn_update_credit_card"
+                    className="btn_error_credit_card"
                     onClick={handleClick}>
-                        Regresar a página principal
+                        Regresar
                 </button>
             </div>
         </div>
@@ -32,9 +30,6 @@ function ErrorCard(props){
 
     return (
         <div>
-            <Navbar
-                openNav={openNav}
-                handleOpenNav={handleOpenNav} />
             <div style={styles.containerForm}>
                 {formObject}
             </div>

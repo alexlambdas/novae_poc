@@ -73,3 +73,33 @@ body {
 .btn_update_credit_card:active {
   background-color: #4a148c;
 }
+
+/* Styles for ErrorCard.js */
+.btn_error_credit_card {
+  background-color: #f50057;
+}
+.btn_error_credit_card:hover {
+  background-color: #c51162;
+  transition: 0.3s ease;
+}
+.btn_error_credit_card:focus {
+  outline: none;
+}
+.btn_error_credit_card:active {
+  background-color: #4a148c;
+}
+
+/* SuccessCard.js */
+.btn_success_credit_card{
+  background-color: #00bfa5;
+}
+.btn_success_credit_card:hover {
+  background-color: #00897b;
+  transition: 0.3s ease;
+}
+.btn_success_credit_card:focus {
+  outline: none;
+}
+.btn_success_credit_card:active {
+  background-color: #00695c;
+}
