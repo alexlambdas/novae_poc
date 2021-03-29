@@ -140,6 +140,18 @@ _Ingresar al siguiente directorio del proyecto_
 novae_poc# cd ./docker_springboot_back
 ```
 
+_Ejecutar el siguiente comando limpiar cache de maven_
+
+```
+docker_springboot_back# mvn clean
+```
+
+_Ejecutar el siguiente comando construir el jar con maven_
+
+```
+docker_springboot_back# mvn package
+```
+
 _Ejecutar el siguiente comando Docker para construir la imagen_
 
 ```
