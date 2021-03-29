@@ -13,6 +13,8 @@ _Spring Boot_
 
 _Java 1.8_
 
+_maven_
+
 _ReactJS_
 
 _NodeJS_
@@ -45,12 +47,19 @@ _Verficar que esta instalado con el siguiente comando_
 # git version
 ```
 
+_maven_
+
+_Verficar que esta instalado con el siguiente comando_
+
+```
+# mvn --v
+```
+
 _Puertos locales del Computador_
 
 _Verficar que los puertos 6002 (ReactAPP), 6001 (SpringBoot App) y 5432 (Postgresql) estan disponibles, ya que son utilizados por los contenedores Docker del proyecto_
 
-**nota:** no es propósito de esta guia, explicar la instalación y configuración de _Docker_ o _Git_, se asume
-que ya estan instalados y configurados.
+**nota:** no es propósito de esta guia, explicar la instalación y configuración de _Docker_, _Git_ o _maven_, se asume que ya estan instalados y configurados.
 
 ### Instalación POSTGRESQL 🔧
 
