@@ -160,6 +160,18 @@ _Ingresar al siguiente directorio del proyecto_
 novae_poc# cd ./docker_reactjs_front
 ```
 
+_Ejecutar el siguiente comando para la instalación de dependencias npm_
+
+```
+docker_reactjs_front# npm install
+```
+
+_Ejecutar el siguiente comando para la construcción de fuentes para empaquetar_
+
+```
+docker_reactjs_front# npm run build
+```
+
 _Ejecutar el siguiente comando Docker para construir la imagen_
 
 ```
